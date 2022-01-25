@@ -2,11 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>卡必达:招领信息展示</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
 
+
+<div class="container">
     <div class="row clearfix">
         <div class="col-md-12 column">
             <div class="page-header">
@@ -23,7 +25,7 @@
     <div class="row">
         <div class="col-md-4 column">
 <!--            <a class="btn btn-primary" href="${pageContext.request.contextPath}/book/toAddBook">新增</a> ?userId=' + ${session.userId} -->
-            <a class="btn btn-primary" th:if="${session.userId != null}" href="/toUserLost" >查看全部/操作</a>
+            <a class="btn btn-primary" th:if="${session.userId != null}" href="/toUserLost" >查看全部 / 操作</a>
             <a class="btn btn-primary" th:if="${session.userId == null}" href="/login">登录</a>
         </div>
     </div>
@@ -54,6 +56,18 @@
         </div>
     </div>
 </div>
+
+
+<div class="copyright" align="center">
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <p>感谢使用！</p>
+    <p>Copyright © 2022 SUT-LXY</p>
+
+</div>
+
+
+
 
 <script type="text/javascript">
     var userId = $.session.get("userId");
