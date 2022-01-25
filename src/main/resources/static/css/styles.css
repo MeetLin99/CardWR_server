@@ -764,6 +764,7 @@ input[type='checkbox'] {
 	line-height: 3rem;
 }
 
+
 .header .p-large {
 	margin-bottom: 2rem;
 	color: #f3f7fd;
@@ -1550,7 +1551,7 @@ a:hover.back-to-top {
 	min-height: 100vh;
 }
 
-.ex-2-header h1,
+.ex-2-header h1,.ex-2-header h2,
 .ex-2-header p {
 	color: #fff;
 }

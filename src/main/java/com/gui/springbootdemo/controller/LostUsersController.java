@@ -80,7 +80,7 @@ public class LostUsersController{
         List<LostRecord> all = lostRecordDao.findAllByStatus(0);
         for (LostRecord recordObj : all) {
             HashMap<String, Object> map = (HashMap<String, Object>) MapUtil.objectToMap(recordObj);
-            LostUsers user = lostUsersDao.findById(recordObj.getLostUserId());
+            LostUsers user = lostUsersDao.findById(recordObj.getcardid());
             if(user == null) continue;
             map.put("userName",user.getUserName());
             map.put("phone",user.getPhone());
@@ -106,7 +106,7 @@ public class LostUsersController{
         List<LostRecord> all = lostRecordDao.findAllByStatus(0);
         for (LostRecord recordObj : all) {
             HashMap<String, Object> map = (HashMap<String, Object>) MapUtil.objectToMap(recordObj);
-            LostUsers user = lostUsersDao.findById(recordObj.getLostUserId());
+            LostUsers user = lostUsersDao.findById(recordObj.getcardid());
             if(user == null) continue;
             map.put("userName",user.getUserName());
             map.put("phone",user.getPhone());

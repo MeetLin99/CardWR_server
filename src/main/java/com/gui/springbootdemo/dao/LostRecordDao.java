@@ -16,7 +16,7 @@ public interface LostRecordDao extends JpaRepository<LostRecord,Integer> {
 
     void delete(LostRecord lostRecord);
 
-    List<LostRecord> findAllByLostUserId(int lostUserId);
+    List<LostRecord> findAllBycardid(int cardid);
 
     List<LostRecord> findAllByStatus(int status);
 }

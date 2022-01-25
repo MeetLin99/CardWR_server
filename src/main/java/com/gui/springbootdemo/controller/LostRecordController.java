@@ -41,15 +41,15 @@ public class LostRecordController {
      */
     @RequestMapping("/toUserLost")
     public String toUserLost(HttpServletRequest request,Model model){
-        int lostUserId = (int) request.getSession().getAttribute("userId");
-        System.out.println(lostUserId);
+        int cardid = (int) request.getSession().getAttribute("userId");
+        System.out.println(cardid);
         ArrayList<Object> lists = new ArrayList<>();
         List<LostRecord> lostRecords = new ArrayList<>();
         try {
-            lostRecords = lostRecordDao.findAllByLostUserId(lostUserId);
+            lostRecords = lostRecordDao.findAllBycardid(cardid);
             for (LostRecord recordObj : lostRecords) {
                 HashMap<String, Object> map = (HashMap<String, Object>) MapUtil.objectToMap(recordObj);
-                LostUsers user = lostUsersDao.findById(recordObj.getLostUserId());
+                LostUsers user = lostUsersDao.findById(recordObj.getcardid());
                 if(user == null) continue;
                 map.put("userName",user.getUserName());
                 map.put("phone",user.getPhone());

@@ -19,7 +19,7 @@ public class LostRecord {
     private int id;
 
     @Column(length = 20)
-    private int lostUserId;
+    private int cardid;
 
     @Column(length = 20)
     private String title;
@@ -43,12 +43,12 @@ public class LostRecord {
         this.id = id;
     }
 
-    public int getLostUserId() {
-        return lostUserId;
+    public int getcardid() {
+        return cardid;
     }
 
-    public void setLostUserId(int lostUserId) {
-        this.lostUserId = lostUserId;
+    public void setcardid(int cardid) {
+        this.cardid = cardid;
     }
 
     public String getTitle() {
@@ -87,7 +87,7 @@ public class LostRecord {
     public String toString() {
         return "LostRecord{" +
                 "id=" + id +
-                ", lostUserId='" + lostUserId + '\'' +
+                ", cardid='" + cardid + '\'' +
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
                 ", typeCode=" + typeCode +
